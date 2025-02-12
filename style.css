@@ -1,0 +1,172 @@
+/* Setări generale */
+body { 
+    font-family: 'Arial', sans-serif; /* Font clar și modern */
+    margin: 0; /* Elimină marginile implicite */
+    padding: 0; /* Elimină spațiile implicite */
+    background-color: #f9f4f8; /* Fundal pastel, plăcut */
+    color: #333; /* Culoare text închisă pentru lizibilitate */
+}
+
+/* Navigare principală */
+.bara { 
+    display: flex; /* Afișare elemente în linie */
+    justify-content: space-between; /* Spațiere între logo și meniul de navigare */
+    align-items: center; /* Centrare verticală a elementelor */
+    padding: 10px 20px; /* Spațiere internă */
+    background-color: #ffebf0; /* Fundal roz pal */
+    border-bottom: 2px solid #ffd1e8; /* Linie de separare */
+}
+.bara .logo { 
+    font-size: 24px; /* Dimensiune logo */
+    font-weight: bold; /* Font îngroșat */
+    color: #ff6295; /* Roz intens pentru logo */
+}
+.bara .nav-links { 
+    list-style: none; /* Elimină punctele din listă */
+    display: flex; /* Elemente afișate în linie */
+    gap: 20px; /* Distanță între linkuri */
+}
+.bara .nav-links li a { 
+    text-decoration: none; /* Elimină sublinierea linkurilor */
+    color: #333; /* Culoare text */
+    font-weight: bold; /* Text îngroșat */
+    transition: color 0.3s ease; /* Trecere lină la hover */
+}
+.bara .nav-links li a:hover { 
+    color: #ff6295; /* Culoare roz la hover */
+}
+
+/* Secțiunea Hero */
+.new { 
+    display: flex; /* Layout pe două coloane */
+    justify-content: space-between; /* Spațiere între text și imagine */
+    align-items: center; /* Aliniere verticală */
+    padding: 50px; /* Spațiere internă mare */
+    background: linear-gradient(to bottom, #ffd1e8, #f9f4f8); /* Gradient pentru fundal */
+}
+.hero-text { 
+    max-width: 50%; /* Lățime maximă pentru text */
+}
+.hero-text h1 { 
+    font-size: 48px; /* Titlu mare și vizibil */
+    margin-bottom: 20px; /* Spațiu sub titlu */
+    color: #ff6295; /* Roz intens */
+}
+.hero-text p { 
+    font-size: 18px; /* Dimensiune medie pentru descriere */
+    margin-bottom: 20px; /* Spațiu sub text */
+}
+.cta-button-new { 
+    background-color: #ff6295; /* Fundal roz intens */
+    color: #fff; /* Text alb */
+    padding: 15px 30px; /* Spațiere internă mare */
+    border: none; /* Fără contur */
+    border-radius: 30px; /* Colțuri rotunjite */
+    text-decoration: none; /* Fără subliniere */
+    font-size: 16px; /* Dimensiune text */
+    transition: background-color 0.3s ease; /* Efect lin la hover */
+}
+.cta-button-new:hover { 
+    background-color: #ff85a9; /* Roz deschis la hover */
+}
+.hero-image img { 
+    max-width: 100%; /* Imagine responsivă */
+    border-radius: 20px; /* Colțuri rotunjite */
+    transition: transform ease-in-out 0.3s;
+}
+
+.hero-image img:hover {
+    transform: scale(1.1);
+}
+
+/* Secțiunea Beneficii */
+.features { 
+    padding: 50px; /* Spațiere internă mare */
+    text-align: center; /* Centrare text */
+    background-color: #fff; /* Fundal alb */
+}
+.features h2 { 
+    font-size: 36px; /* Dimensiune mare pentru titlu */
+    color: #333; /* Culoare închisă pentru contrast */
+    margin-bottom: 30px; /* Spațiu sub titlu */
+}
+.grila { 
+    display: grid; /* Layout grilă */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grilă flexibilă */
+    gap: 20px; /* Distanță între carduri */
+}
+.card { 
+    background-color: #f9f4f8; /* Fundal pastel */
+    padding: 20px; /* Spațiere internă */
+    border-radius: 15px; /* Colțuri rotunjite */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Umbră subtilă */
+    text-align: center; /* Centrare text */
+    transition: transform ease-in-out 0.3s;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.card img { 
+    width: 100px; /* Dimensiune fixă pentru icon */
+    margin-bottom: 15px; /* Spațiu sub imagine */
+    transition: transform ease-in-out 0.3s;
+}
+.card img:hover{
+    transform: scale(1.1);
+}
+
+/* Produse Recomandate */
+#produse-noi { 
+    padding: 50px; /* Spațiere internă mare */
+    background-color: #ffebf0; /* Fundal roz pal */
+    text-align: center; /* Text centrat */
+}
+.grila-produse { 
+    display: grid; /* Layout grilă */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grilă flexibilă */
+    gap: 20px; /* Spațiu între carduri */
+}
+.items { 
+    background-color: #fff; /* Fundal alb */
+    padding: 20px; /* Spațiere internă */
+    border-radius: 10px; /* Colțuri rotunjite */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Umbră subtilă */
+    text-align: center; /* Centrare text */
+    transition: transform 0.3s ease-in-out;
+}
+.items:hover {
+    transform: scale(1.05);
+  }
+
+.items img { 
+    width: 20%; /* Imagine responsivă */
+    margin-bottom: 15px; /* Spațiu sub imagine */
+    transition: transform 0.3s ease-in-out;
+}
+.items img:hover {
+    transform: scale(1.05);
+  }
+
+/* Footer */
+.new-footer { 
+    background-color: #ffebf0; /* Fundal roz pal */
+    text-align: center; /* Text centrat */
+    padding: 20px; /* Spațiere internă */
+    border-top: 2px solid #ffd1e8; /* Linie de separare */
+}
+.new-footer p { 
+    margin: 5px 0; /* Spațiu între linii */
+    color: #333; /* Culoare text */
+}
+.new-footer ul { 
+    list-style: none; /* Elimină marcatorii listei */
+    display: flex; /* Afișare pe o linie */
+    justify-content: center; /* Centrare elemente */
+    gap: 15px; /* Distanță între linkuri */
+}
+.new-footer ul li a { 
+    text-decoration: none; /* Elimină sublinierea */
+    color: #333; /* Culoare text */
+    font-size: 14px; /* Dimensiune mică pentru linkuri */
+}
+
