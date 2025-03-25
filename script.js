@@ -47,3 +47,56 @@ function startCountdown(element, duration) {
 });
 
 ///////////////////////////////////////// 
+// Selectăm elementele necesare
+const produseCos = document.getElementById('produse-cos');
+const totalElement = document.getElementById('total');
+const cosElement = document.getElementById('cos');
+const inchideCosButton = document.getElementById('inchide-cos');
+const adaugaCosButtons = document.querySelectorAll('.adauga-cos');
+
+// Array pentru produsele din coș
+let cos = [];
+
+// Funcție pentru a actualiza vizualizarea coșului
+function actualizeazaCos() {
+    // Curățăm lista de produse
+    produseCos.innerHTML = '';
+
+    // Adăugăm produsele din coș
+    cos.forEach(produs => {
+        const produsElement = document.createElement('li');
+        produsElement.textContent = `${produs.nume} - ${produs.pret} Lei`;
+        produseCos.appendChild(produsElement);
+    });
+
+    // Actualizăm totalul
+    const total = cos.reduce((suma, produs) => suma + produs.pret, 0);
+    totalElement.textContent = total;
+
+    // Dacă coșul este gol, ascundem pop-up-ul
+    if (cos.length === 0) {
+        cosElement.style.display = 'none';
+    }
+}
+
+// Adăugăm produsul în coș
+function adaugaInCos(nume, pret) {
+    const produs = { nume, pret: parseFloat(pret) };
+    cos.push(produs);
+    actualizeazaCos();
+    cosElement.style.display = 'flex'; // Arătăm coșul când un produs este adăugat
+}
+
+// Adăugăm evenimente pentru fiecare buton „Adaugă în coș”
+adaugaCosButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const nume = button.getAttribute('data-nume');
+        const pret = button.getAttribute('data-preț');
+        adaugaInCos(nume, pret);
+    });
+});
+
+// Închidem coșul
+inchideCosButton.addEventListener('click', () => {
+    cosElement.style.display = 'none';
+});

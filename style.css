@@ -170,4 +170,70 @@ body {
     font-size: 14px; /* Dimensiune mică pentru linkuri */
 }
 
-/*ajsdasdasd*/
+/* Stilizare produse */
+.produse {
+    display: flex;
+    gap: 20px;
+}
+
+.produs {
+    width: 200px;
+    text-align: center;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Stilizare pop-up coș */
+.cos {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.cos-content {
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#produse-cos {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#produse-cos li {
+    margin: 10px 0;
+}
+
+/* Stilizare buton de închidere */
+#inchide-cos {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#inchide-cos:hover {
+    background-color: #e53935;
+}

@@ -1,50 +1,35 @@
 <!DOCTYPE html>
-<html lang="ro"> 
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glow Essence Studio</title>
     <link rel="stylesheet" href="style.css"> <!-- Conectează fișierul CSS pentru stilizare -->
 </head>
 <body>
     <!-- Navigare principală -->
-    <nav class="bara"> <!-- Creează bara de navigare -->
-        <div class="logo">Glow Essence</div> <!-- Logo-ul site-ului -->
-        <ul class="nav-links"> <!-- Listă de linkuri pentru navigare -->
-            <li><a href="index.html">Acasă</a></li> <!-- Link către pagina de Acasă -->
-            <li><a href="#produse-noi">Produse</a></li> <!-- Link către secțiunea Produse -->
-            <li><a href="#">Servicii</a></li> <!-- Link către Servicii -->
-            <li><a href="#">Contact</a></li> <!-- Link către secțiunea Contact -->
+    <nav class="bara">
+        <div class="logo">Glow Essence</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="#produse-noi">Produse</a></li>
+            <li><a href="#">Servicii</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </nav>
-  
-    <!-- Modal pentru Detalii Produs -->
-<div id="productModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2 id="modalTitle"></h2>
-        <img id="modalImage" src="" alt="Product Image">
-        <p id="modalDescription"></p>
-        <p><strong>Preț:</strong> <span id="modalPrice"></span></p>
-    </div>
-</div>
-
 
 
     <!-- Secțiunea Hero -->
     <section class="new">
-        <div class="hero-text"> 
-            <h1>Redescoperă Frumusețea Naturală</h1> 
-            <p>Transformă-ți rutina zilnică cu produse naturale care îți redau strălucirea pielii.</p> 
-            <a href="#produse-noi" class="cta-button-new">Explorează Colecția</a> <!-- Buton către colecție -->
+        <div class="hero-text">
+            <h1>Redescoperă Frumusețea Naturală</h1>
+            <p>Transformă-ți rutina zilnică cu produse naturale care îți redau strălucirea pielii.</p>
+            <a href="#produse-noi" class="cta-button-new">Explorează Colecția</a>
         </div>
-        <div class="hero-image"> <!-- Div pentru imaginea principală -->
-            <img src="./Photos/cosmetica.png" alt="Imagine cosmetice naturale"> <!-- Imaginea reprezentativă -->
+        <div class="hero-image">
+            <img src="./Photos/cosmetica.png" alt="Imagine cosmetice naturale">
         </div>
     </section>
-
-
-
 
     <!-- Secțiunea Beneficii -->
     <section class="features"> 
@@ -70,29 +55,44 @@
     </section>
 
     <!-- Secțiunea Produse -->
-    <section id="produse-noi"> 
+    <section id="produse-noi">
         <h2>Produse Populare</h2>
-        <div class="grila-produse"> 
-            <div class="items"> 
-                <img src="./Photos/crema.png" alt="Crema de noapte"> 
+        <div class="grila-produse">
+            <div class="items">
+                <img src="./Photos/crema.png" alt="Crema de noapte">
                 <h3>Crema de Noapte</h3>
-                <div>Oferta 1 expiră în: <span class="countdown" data-time="60"></span></div> 
+                <button class="adauga-cos" data-nume="Crema de Noapte" data-preț="50">Adaugă în Coș</button>
+                <div>Oferta 1 expiră în: <span class="countdown" data-time="60"></span></div>
             </div>
-            <div class="items"> 
-                <img src="./Photos/ser.png" alt="Ser revitalizant"> 
-                <h3>Ser Revitalizant</h3> 
+            <div class="items">
+                <img src="./Photos/ser.png" alt="Ser revitalizant">
+                <h3>Ser Revitalizant</h3>
+                <button class="adauga-cos" data-nume="Ser Revitalizant" data-preț="70">Adaugă în Coș</button>
                 <div>Oferta 2 expiră în: <span class="countdown" data-time="900"></span></div>
             </div>
         </div>
     </section>
 
-<script src="script.js"></script>
+    <!-- Coșul de Cumpărături (Pop-up) -->
+    <div id="cos" class="cos">
+        <div class="cos-content">
+            <h2>Coșul Tău</h2>
+            <ul id="produse-cos">
+                <!-- Produsele vor fi adăugate aici -->
+            </ul>
+            <p>Total: <span id="total">0</span> Lei</p>
+            <button id="inchide-cos">Închide</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
     <!-- Footer -->
-    <footer class="new-footer"> <!-- Secțiunea de subsol -->
-        <p>&copy; 2024 Glow Essence Studio. Toate drepturile rezervate.</p> <!-- Drepturi de autor -->
-        <ul> <!-- Listă cu linkuri în subsol -->
-            <li><a href="#">Politica de Confidențialitate</a></li> <!-- Link către politica de confidențialitate -->
-            <li><a href="#">Termeni și Condiții</a></li> <!-- Link către termenii și condițiile site-ului -->
+    <footer class="new-footer">
+        <p>&copy; 2024 Glow Essence Studio. Toate drepturile rezervate.</p>
+        <ul>
+            <li><a href="#">Politica de Confidențialitate</a></li>
+            <li><a href="#">Termeni și Condiții</a></li>
         </ul>
     </footer>
 </body>
