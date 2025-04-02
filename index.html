@@ -4,99 +4,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glow Essence Studio</title>
-    <link rel="stylesheet" href="style.css"> <!-- Conectează fișierul CSS pentru stilizare -->
+    <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
-    <!-- Navigare principală -->
-    <nav class="bara">
-        <div class="logo">Glow Essence</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Acasă</a></li>
-            <li><a href="#produse-noi">Produse</a></li>
-            <li><a href="#">Servicii</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+
+    <nav class="navbar">
+        <div class="container" style="text-align: left; padding-left: 20px">
+            <img src="./Photos/menu_white.png" style="width: 20px; cursor: pointer" alt="Menu" onclick="toggleMenu()">
+        </div>
+
+        <div class="container">
+            <img src="./Photos/cosmetics.png" style="width: 90px; cursor: pointer" alt="Logo" onclick="index.html">
+        </div>
+
+        <div class="container" style="text-align: right;">
+            <span class="list">Cos</span>
+            <span class="list">Contact</span>
+            <span class="list">Info</span>
+        </div>
     </nav>
 
+    <div class="menu">
+        <div style="padding: 35px 30px;">
+            <img src="./Photos/menu.png" style="width: 20px; cursor: pointer" alt="Menu" onclick="toggleMenu()">
+        </div>
+        <div style="margin-top: 30px;" class="menu_list_2">
+            <a href="#rec"><div class="menu_list">
+                Catalog
+            </div></a>
+            <a href="#servicii"><div class="menu_list">
+                Servicii
+            </div></a>
+            <a href="#recenzii"><div class="menu_list">
+                Recenzii
+            </div></a>
+        </div>
+    </div>
 
-    <!-- Secțiunea Hero -->
     <section class="new">
         <div class="hero-text">
             <h1>Redescoperă Frumusețea Naturală</h1>
             <p>Transformă-ți rutina zilnică cu produse naturale care îți redau strălucirea pielii.</p>
-            <a href="#produse-noi" class="cta-button-new">Explorează Colecția</a>
+            <a href="#rec" class="cta-button-new">Explorează Colecția</a>
         </div>
         <div class="hero-image">
             <img src="./Photos/cosmetica.png" alt="Imagine cosmetice naturale">
         </div>
     </section>
 
-    <!-- Secțiunea Beneficii -->
-    <section class="features"> 
-        <h2>De ce să alegi Glow Essence?</h2>
-        <div class="grila"> <!-- Layout grilă pentru beneficii -->
-            <div class="card">
-                <img src="./Photos/natural.png" alt="Natural"> 
-                <h3>Ingrediente Pure</h3>
-                <p>Folosim doar ingrediente naturale pentru cele mai bune rezultate.</p> 
-            </div>
-            <div class="card">
-                <img src="./Photos/livrare.png" alt="Livrare"> 
-                <h3>Livrare Rapida</h3>
-                <p>Produsele tale direct la usa.</p> 
-            </div>
-            <div class="card"> 
-                <img src="./Photos/rezultate.png" alt="Results"> 
-                <h3>Rezultate Vizibile</h3>
-                <p>Piele sanatoasa</p> 
+    <hr style="margin-top: 100px; width: 75%; outline: none; border: none; background: rgba(0,0,0,0.1); height: 1px;">
 
-            </div>
+    <div style="margin-top: 75px;">
+        <div style="font-size: 24px; color: #ff6295; font-weight: bold; text-align: center;">
+            Beneficii
         </div>
-    </section>
 
-    <!-- Secțiunea Produse -->
-    <section id="produse-noi">
-        <h2>Produse Populare</h2>
-        <div class="grila-produse">
-            <div class="items">
-                <img src="./Photos/crema.png" alt="Crema de noapte">
-                <h3>Crema de Noapte</h3>
-                <button class="adauga-cos" data-nume="Crema de Noapte" data-preț="50">Adaugă în Coș</button>
-                <div>Oferta 1 expiră în: <span class="countdown" data-time="60"></span></div>
+        <div class="wrapper">
+            <div class="mini_container">
+                Rezultatele vizibile
+                <div style="margin: 20px;">
+                    <img src="./Photos/visible.png" style="width: 100px;">
+                </div>
             </div>
-            <div class="items">
-                <img src="./Photos/ser.png" alt="Ser revitalizant">
-                <h3>Ser Revitalizant</h3>
-                <button class="adauga-cos" data-nume="Ser Revitalizant" data-preț="70">Adaugă în Coș</button>
-                <div>Oferta 2 expiră în: <span class="countdown" data-time="900"></span></div>
+            <div class="mini_container">
+                Ingrediente pure
+                <div style="margin: 20px;">
+                    <img src="./Photos/pure.png" style="width: 100px;">
+                </div>
             </div>
-        </div>
-    </section>
-
-    <button id="scrollToTop" class="scroll-top">&#8679;</button>
-
-
-    <!-- Coșul de Cumpărături (Pop-up) -->
-    <div id="cos" class="cos">
-        <div class="cos-content">
-            <h2>Coșul Tău</h2>
-            <ul id="produse-cos">
-                <!-- Produsele vor fi adăugate aici -->
-            </ul>
-            <p>Total: <span id="total">0</span> Lei</p>
-            <button id="inchide-cos">Închide</button>
+            <div class="mini_container">
+                Livrarea rapida
+                <div style="margin: 20px;">
+                    <img src="./Photos/fast.png" style="width: 100px;">
+                </div>
+            </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <hr style="margin-top: 100px; width: 75%; outline: none; border: none; background: rgba(0,0,0,0.1); height: 1px;">
 
-    <!-- Footer -->
-    <footer class="new-footer">
-        <p>&copy; 2024 Glow Essence Studio. Toate drepturile rezervate.</p>
+    <div style="margin-top: 100px;">
+        <div style="font-size: 24px; color: #ff6295; font-weight: bold; text-align: center;">
+            Reduceri
+        </div>
+
+        <div class="wrapper" id="sales">
+            <div class="mini_container2" id="1">
+                <img src="./Photos/sale.png" style="width: 50px; transform: translate(-10px, -10px); position: absolute">
+                <img src="./Photos/Rotation/1.png" class="rotation_imgs">
+            </div>
+            <div class="mini_container2" id="2">
+                <img src="./Photos/sale.png" style="width: 50px; transform: translate(-10px, -10px); position: absolute">
+                <img src="./Photos/Rotation/2.png" class="rotation_imgs">
+            </div>
+            <div class="mini_container2" id="3">
+                <img src="./Photos/sale.png" style="width: 50px; transform: translate(-10px, -10px); position: absolute">
+                <img src="./Photos/Rotation/3.png" class="rotation_imgs">
+            </div>
+        </div>
+    </div>
+
+    <hr style="margin-top: 100px; width: 75%; outline: none; border: none; background: rgba(0,0,0,0.1); height: 1px;">
+
+    <div style="margin-top: 100px;">
+        <div style="font-size: 24px; color: #ff6295; font-weight: bold; text-align: center;">
+            Produse recomandate
+        </div>
+
+        <div class="wrapper" id="rec">
+            <div class="mini_container2" id="r1">
+                <img src="./Photos/Rotation/r1.png" class="rotation_imgs">
+            </div>
+            <div class="mini_container2" id="r2">
+                <img src="./Photos/Rotation/r2.png" class="rotation_imgs">
+            </div>
+            <div class="mini_container2" id="r3">
+                <img src="./Photos/Rotation/r3.png" class="rotation_imgs">
+            </div>
+        </div>
+    </div>
+
+    <hr style="margin-top: 100px; width: 75%; outline: none; border: none; background: rgba(0,0,0,0.1); height: 1px;">
+
+    <div style="margin-top: 100px;">
+        <div style="font-size: 24px; color: #ff6295; font-weight: bold; text-align: center;">
+            Galerie foto
+        </div>
+
+        <div class="wrapper" id="gal">
+            <div class="mini_container2" style="background: none" id="r1">
+                <img onclick="leftClick()" src="./Photos/left-arrow.png" style="cursor: pointer; width: 100px; vertical-align: middle; opacity: 0.6; margin-top: 75px;">
+            </div>
+            <div class="mini_container2" id="gal_main">
+                <img src="./Photos/Rotation/1.png" class="rotation_imgs">
+            </div>
+            <div class="mini_container2" style="background: none" id="r1">
+                <img onclick="rightClick()" src="./Photos/right-arrow.png" style="cursor: pointer; width: 100px; vertical-align: middle; opacity: 0.6; margin-top: 75px;">
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="new-footer" style="margin-top: 50px">
+        <p>&copy; 2025 Glow Essence Studio. Toate drepturile rezervate.</p>
         <ul>
             <li><a href="#">Politica de Confidențialitate</a></li>
             <li><a href="#">Termeni și Condiții</a></li>
         </ul>
     </footer>
+
 </body>
+<script src="script.js"></script>
 </html>
