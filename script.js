@@ -67,3 +67,16 @@ function rightClick(){
     global_index==5?global_index=1:global_index++;
     document.getElementById("gal_main").innerHTML = `<img src="./Photos/Rotation/${global_index}.png" class="rotation_imgs">`;
 }
+
+function toggleMenu() {
+    let el = document.getElementsByClassName('menu')[0];
+    if (el.style.left === '0px' || el.classList.contains("open")) {
+        el.style.left = '-100%';
+        el.classList.remove("open");
+        el.style.boxShadow = 'none';
+    } else {
+        el.style.left = '0';
+        el.classList.add("open");
+        el.style.boxShadow = '0px 0px 500px black';
+    }
+}
