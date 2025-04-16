@@ -1,2 +1,1 @@
-Hello World!
-Welcome to our website made by `Adelina` and `Radu` :D
+Hello World!\nWelcome to our website made by `Adelina` and `Radu` :D
